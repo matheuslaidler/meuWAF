@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>meuWAF - Web Application Firewall Brasileiro</title>
+    <link rel="shortcut icon" type="image/jpg" href="img/fav.ico"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/tailwind.js"></script>
+</head>
+<body class="font-sans antialiased bg-darkblue text-gray-100 transition-colors duration-300">
+    <!-- Tech Grid Background -->
+    <div class="tech-grid fixed inset-0 pointer-events-none"></div>
+    
+    <!-- Header/Navigation -->
+    <header class="sticky top-0 z-50 bg-darkblue/80 backdrop-blur-sm shadow-sm border-b border-gray-800">
+        <div class="container mx-auto px-4 md:px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <i class="fas fa-shield-alt text-3xl text-techblue mr-3"></i>
+                    <span class="text-2xl font-bold">meu<span class="logo-gradient">WAF</span></span>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#features" class="font-medium text-gray-300 hover:text-white transition nav-link">Recursos</a>
+                    <a href="#how-it-works" class="font-medium text-gray-300 hover:text-white transition nav-link">Como Funciona</a>
+                    <a href="#contact" class="font-medium text-gray-300 hover:text-white transition nav-link">Contato</a>
+                </nav>
+                <div class="flex items-center space-x-4">
+                    <a id="language-toggle" class="p-2 rounded-lg hover:bg-gray-800 transition font-medium text-gray-300 hover:text-white hidden md:block"  href="index-en.html">
+                        PT
+                    </a>
+                    <a href="###https://wa.me/55######" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-4 md:px-6 py-2 rounded-lg font-medium transition shadow-md flex items-center animation button-pulse">
+                        <i class="fab fa-whatsapp mr-2"></i> <span class="hidden sm:inline">WhatsApp</span>
+                    </a>
+                    <button id="mobile-menu-button" class="md:hidden text-gray-300 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="mobile-menu md:hidden bg-darkblue/90 mt-4 rounded-lg overflow-hidden">
+                <div class="px-4 py-3 space-y-4">
+                    <a href="#features" class="block font-medium text-gray-300 hover:text-white transition nav-link">Recursos</a>
+                    <a href="#how-it-works" class="block font-medium text-gray-300 hover:text-white transition nav-link">Como Funciona</a>
+                    <a href="#contact" class="block font-medium text-gray-300 hover:text-white transition nav-link">Contato</a>
+                    <a id="mobile-language-toggle" class="p-2 rounded-lg hover:bg-gray-800 transition font-medium text-gray-300 hover:text-white"  href="index-en.html">
+                        PT / EN
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white relative overflow-hidden">
+        <div class="container mx-auto px-4 md:px-6 py-16 md:py-24 relative z-10">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0 fade-in-section">
+                    <h1 class="text-3xl md:text-5xl font-bold leading-tight mb-6 text-center md:text-left">Proteção Empresarial para Suas Aplicações Web</h1>
+                    <p class="text-lg md:text-xl text-gray-300 mb-8 text-center md:text-left">O WAF mais avançado do mercado, protegendo seus negócios contra ameaças cibernéticas em tempo real com configuração simples e eficiência comprovada.</p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start">
+                        <a href="#contact" class="bg-techblue hover:bg-techblue/90 text-white px-6 md:px-8 py-3 md:py-4 rounded-lg font-bold text-lg text-center transition-all duration-300 shadow-lg hover:shadow-techblue/30 hover:scale-[1.02]">
+                            Falar com Especialista
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 fade-in-section delay-200">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-techblue rounded-xl opacity-20 blur-xl animate-pulse"></div>
+                        <img src="img/firewall.webp" alt="Security Illustration" class="relative rounded-xl shadow-2xl border border-techblue/20 animation float z-10 w-full">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-12 md:py-16 bg-darkblue/50 backdrop-blur-sm">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+                <div class="stat-item p-4 md:p-6 rounded-xl shadow-md text-center fade-in-section delay-100">
+                    <div class="text-2xl md:text-4xl font-bold text-techblue mb-2">99.9%</div>
+                    <div class="text-sm md:text-base text-gray-400">Taxa de bloqueio de ameaças</div>
+                </div>
+                <div class="stat-item p-4 md:p-6 rounded-xl shadow-md text-center fade-in-section delay-200">
+                    <div class="text-2xl md:text-4xl font-bold text-techblue mb-2">24/7</div>
+                    <div class="text-sm md:text-base text-gray-400">Monitoramento contínuo</div>
+                </div>
+                <div class="stat-item p-4 md:p-6 rounded-xl shadow-md text-center fade-in-section delay-300">
+                    <div class="text-2xl md:text-4xl font-bold text-techblue mb-2">50ms</div>
+                    <div class="text-sm md:text-base text-gray-400">Latência adicional mínima</div>
+                </div>
+                <div class="stat-item p-4 md:p-6 rounded-xl shadow-md text-center fade-in-section delay-400">
+                    <div class="text-2xl md:text-4xl font-bold text-techblue mb-2">Facilidade</div>
+                    <div class="text-sm md:text-base text-gray-400">Interface simples e fácil (User Friendly)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-12 md:py-20 bg-darkblue">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0 md:pr-12 fade-in-section">
+                    <h2 class="text-2xl md:text-4xl font-bold mb-6">Sobre o meuWAF</h2>
+                    <p class="text-lg md:text-xl text-gray-300 mb-6 md:mb-8">Segurança web sem complicações</p>
+                    <p class="text-gray-400 mb-4 md:mb-6">O meuWAF atua como um proxy reverso com funcionalidades completas de Web Application Firewall (WAF). Ele se integra facilmente à sua infraestrutura existente para proteger sites, aplicações e APIs.</p>
+                    <p class="text-gray-400 mb-6 md:mb-8">Defenda-se contra ameaças comuns como as listadas no OWASP Top 10, bloqueie bots maliciosos, mitigue ataques DDoS e muito mais.</p>
+                    <p class="text-gray-400">Gerencie certificados HTTPS, controle o tráfego externo defina políticas de segurança HTTP com facilidade — ou seja, a proteção do seu ambiente digital deixa de ser um problema.</p>
+                </div>
+                <div class="md:w-1/2 fade-in-section delay-200">
+                    <div class="tech-border rounded-xl shadow-xl overflow-hidden p-1">
+                        <img src="img/protect.webp" alt="About meuWAF" class="rounded-lg w-full">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-12 md:py-20 bg-darkblue/50 backdrop-blur-sm">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center mb-12 md:mb-16 fade-in-section">
+                <h2 class="text-2xl md:text-4xl font-bold mb-4">Os 5 Pilares do meuWAF</h2>
+                <p class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">Conheça os fundamentos que tornam nossa solução única</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 md:gap-8">
+                <!-- Feature 1 -->
+                <div class="feature-card p-6 md:p-8 rounded-xl fade-in-section delay-100">
+                    <div class="w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center mb-4 md:mb-6 mx-auto feature-icon text-white">
+                        <i class="fas fa-lock text-xl md:text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg md:text-xl font-bold mb-3 text-center">Secure by default</h3>
+                    <p class="text-sm md:text-base text-gray-400 text-center">Segurança aplicada por padrão em todos os serviços.</p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="feature-card p-6 md:p-8 rounded-xl fade-in-section delay-200">
+                    <div class="w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center mb-4 md:mb-6 mx-auto feature-icon text-white">
+                        <i class="fas fa-cloud text-xl md:text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg md:text-xl font-bold mb-3 text-center">Agnóstico</h3>
+                    <p class="text-sm md:text-base text-gray-400 text-center">Compatível com ambientes em nuvem e locais.</p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="feature-card p-6 md:p-8 rounded-xl fade-in-section delay-300">
+                    <div class="w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center mb-4 md:mb-6 mx-auto feature-icon text-white">
+                        <i class="fas fa-sliders-h text-xl md:text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg md:text-xl font-bold mb-3 text-center">Configuração</h3>
+                    <p class="text-sm md:text-base text-gray-400 text-center">Configuração precisa e adaptável às suas necessidades.</p>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="feature-card p-6 md:p-8 rounded-xl fade-in-section delay-400">
+                    <div class="w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center mb-4 md:mb-6 mx-auto feature-icon text-white">
+                        <i class="fas fa-puzzle-piece text-xl md:text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg md:text-xl font-bold mb-3 text-center">Modular</h3>
+                    <p class="text-sm md:text-base text-gray-400 text-center">Arquitetura modular para expansão de funcionalidades.</p>
+                </div>
+                
+                <!-- Feature 5 -->
+                <div class="feature-card p-6 md:p-8 rounded-xl fade-in-section delay-500">
+                    <div class="w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center mb-4 md:mb-6 mx-auto feature-icon text-white">
+                        <i class="fas fa-user-tie text-xl md:text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg md:text-xl font-bold mb-3 text-center">Profissional</h3>
+                    <p class="text-sm md:text-base text-gray-400 text-center">Pensado para atender demandas reais de empresas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-12 md:py-20 bg-darkblue">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center mb-12 md:mb-16 fade-in-section">
+                <h2 class="text-2xl md:text-4xl font-bold mb-4">Como um WAF funciona?</h2>
+                <p class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">Entenda a tecnologia que protege seus negócios</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0 md:pr-12 fade-in-section">
+                    <p class="text-gray-400 mb-6 md:mb-8">A Web Application Firewall funciona como um proxy reverso, analisando todas as requisições antes de atingirem seu servidor. Se algo for considerado malicioso, é automaticamente bloqueiro.</p>
+                    
+                    <h3 class="text-xl md:text-2xl font-bold mb-4">Funções Chave</h3>
+                    
+                    <div class="space-y-4 md:space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-techblue/10 rounded-full w-8 h-8 md:w-10 md:h-10 flex items-center justify-center mr-3 md:mr-4 flex-shrink-0">
+                                <i class="fas fa-bolt text-techblue text-sm md:text-base"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1 text-base md:text-lg">Real-time threat intelligence</h4>
+                                <p class="text-gray-400 text-sm md:text-base">Sempre atualizado com as ameaças mais recentes</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-techblue/10 rounded-full w-8 h-8 md:w-10 md:h-10 flex items-center justify-center mr-3 md:mr-4 flex-shrink-0">
+                                <i class="fas fa-shield-alt text-techblue text-sm md:text-base"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1 text-base md:text-lg">Intrusion detection</h4>
+                                <p class="text-gray-400 text-sm md:text-base">Detecta e bloqueia atividades maliciosas</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-techblue/10 rounded-full w-8 h-8 md:w-10 md:h-10 flex items-center justify-center mr-3 md:mr-4 flex-shrink-0">
+                                <i class="fas fa-filter text-techblue text-sm md:text-base"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1 text-base md:text-lg">Rule-based filtering</h4>
+                                <p class="text-gray-400 text-sm md:text-base">Com regras genéricas e personalizadas</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-techblue/10 rounded-full w-8 h-8 md:w-10 md:h-10 flex items-center justify-center mr-3 md:mr-4 flex-shrink-0">
+                                <i class="fas fa-tachometer-alt text-techblue text-sm md:text-base"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1 text-base md:text-lg">Rate limiting</h4>
+                                <p class="text-gray-400 text-sm md:text-base">Previna ataques DDoS e tentativas de força bruta</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2 fade-in-section delay-200">
+                    <div class="tech-border rounded-xl shadow-xl overflow-hidden p-1">
+                        <img src="img/waf.webp" alt="How WAF works" class="rounded-lg w-full">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 md:mt-16 bg-techblue/10 p-6 md:p-8 rounded-xl backdrop-blur-sm fade-in-section delay-300">
+                <h3 class="text-xl md:text-2xl font-bold mb-4">Conclusão</h3>
+                <p class="text-gray-300"><br>Um WAF é essencial para uma estratégia completa de segurança digital. <br><br>O meuWAF oferece uma solução robusta para proteger seus serviços com eficiência e flexibilidade, garantindo que seus dados e clientes estejam sempre seguros.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Single Plan Section -->
+    <section class="py-12 md:py-20 bg-darkblue/50 backdrop-blur-sm">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center mb-12 md:mb-16 fade-in-section">
+                <h2 class="text-2xl md:text-4xl font-bold mb-4">Solução Personalizada</h2>
+                <p class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">Oferecemos uma solução sob medida para sua empresa</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto fade-in-section delay-100">
+                <div class="plan-card rounded-xl shadow-xl overflow-hidden transition duration-300 glow">
+                    <div class="p-8 md:p-12 relative z-10">
+                        <div class="flex flex-col md:flex-row items-center">
+                            <div class="md:w-2/3 mb-8 md:mb-0">
+                                <div class="flex items-center mb-4 md:mb-6">
+                                    <i class="fas fa-crown text-2xl md:text-3xl text-yellow-400 mr-3 md:mr-4"></i>
+                                    <h3 class="text-2xl md:text-3xl font-bold">Solução Empresarial</h3>
+                                </div>
+                                <p class="text-base md:text-lg text-gray-300 mb-6 md:mb-8">Para empresas que exigem proteção completa e personalizada</p>
+                                
+                                <div class="flex items-center mb-6 md:mb-8">
+                                    <div class="text-3xl md:text-5xl font-bold mr-3 md:mr-4">Sob Consulta</div>
+                                    <div class="text-gray-400 text-xs md:text-sm">* Preço personalizado</div>
+                                </div>
+                                
+                                <ul class="space-y-3 md:space-y-4 mb-6 md:mb-8">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-green-400 text-lg md:text-xl mr-2 md:mr-3 mt-0.5 md:mt-1"></i>
+                                        <div>
+                                            <h4 class="font-bold text-base md:text-lg">Aplicações ilimitadas</h4>
+                                            <p class="text-gray-400 text-xs md:text-sm">Proteja quantos serviços web precisar</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-green-400 text-lg md:text-xl mr-2 md:mr-3 mt-0.5 md:mt-1"></i>
+                                        <div>
+                                            <h4 class="font-bold text-base md:text-lg">Todas as proteções</h4>
+                                            <p class="text-gray-400 text-xs md:text-sm">Contra todas as ameaças conhecidas</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-green-400 text-lg md:text-xl mr-2 md:mr-3 mt-0.5 md:mt-1"></i>
+                                        <div>
+                                            <h4 class="font-bold text-base md:text-lg">Dashboard Completo</h4>
+                                            <p class="text-gray-400 text-xs md:text-sm">Monitoramento geral em tempo real</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-green-400 text-lg md:text-xl mr-2 md:mr-3 mt-0.5 md:mt-1"></i>
+                                        <div>
+                                            <h4 class="font-bold text-base md:text-lg">Suporte 24/7 dedicado</h4>
+                                            <p class="text-gray-400 text-xs md:text-sm">Atendimento prioritário para sua empresa</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="md:w-1/3 flex flex-col items-center">
+                                <div class="bg-techblue/10 p-4 md:p-6 rounded-lg mb-4 md:mb-6 w-full text-center backdrop-blur-sm">
+                                    <i class="fas fa-star text-yellow-400 text-2xl md:text-3xl mb-2 md:mb-3"></i>
+                                    <h4 class="font-bold mb-1 md:mb-2 text-base md:text-lg">Melhor Custo-Benefício</h4>
+                                    <p class="text-gray-300 text-xs md:text-sm">Proteção completa com investimento otimizado</p>
+                                </div>
+                                <a href="###https://wa.me/55######" target="_blank" class="w-full button-gradient text-white text-center py-3 md:py-4 px-4 md:px-6 rounded-lg font-bold text-base md:text-lg transition-all duration-300 hover:shadow-techblue/30 hover:scale-[1.02]">
+                                    <i class="fab fa-whatsapp mr-2"></i> Contato via WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-12 md:py-20 bg-gradient-to-r from-techblue to-techpurple text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-techblue/30 to-techpurple/30 backdrop-blur-sm z-0"></div>
+        <div class="container mx-auto px-4 md:px-6 text-center relative z-10">
+            <h2 class="text-2xl md:text-4xl font-bold mb-4 md:mb-6 fade-in-section">Proteção Empresarial sem Complexidade</h2>
+            <p class="text-lg md:text-xl opacity-90 mb-6 md:mb-8 max-w-2xl mx-auto fade-in-section delay-100">Implemente o meuWAF em sua infraestrutura e garanta a segurança de seus dados e clientes.</p>
+            <a href="###https://wa.me/55######" target="_blank" class="inline-block bg-white text-techblue px-6 md:px-8 py-3 md:py-4 rounded-lg font-bold text-base md:text-lg transition-all duration-300 shadow-lg hover:shadow-white/20 hover:scale-[1.02] fade-in-section delay-200">
+                <i class="fab fa-whatsapp mr-2"></i> Fale pelo WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-12 md:py-20 bg-darkblue">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="flex flex-col md:flex-row fade-in-section">
+                <div class="md:w-1/2 mb-12 md:mb-0 md:pr-12">
+                    <h2 class="text-2xl md:text-4xl font-bold mb-4 md:mb-6">Entre em Contato</h2>
+                    <p class="text-gray-400 mb-6 md:mb-8">Tem dúvidas sobre nossos produtos ou precisa de ajuda para escolher a solução certa? Nosso time está pronto para ajudar.</p>
+                    
+                    <div class="space-y-4 md:space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-techblue/10 rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center mr-3 md:mr-4 flex-shrink-0">
+                                <i class="fab fa-whatsapp text-techblue text-lg md:text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-base md:text-lg mb-1">WhatsApp</h4>
+                                <p class="text-gray-400 text-sm md:text-base">+55 (11) 9702-12121</p>
+                                <a href="###https://wa.me/55######" target="_blank" class="text-techblue text-xs md:text-sm hover:underline">Enviar mensagem</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-techblue/10 rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center mr-3 md:mr-4 flex-shrink-0">
+                                <i class="fas fa-envelope text-techblue text-lg md:text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-base md:text-lg mb-1">E-mail</h4>
+                                <p class="text-gray-400 text-sm md:text-base">contato@meuWAF.io</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2 fade-in-section delay-200">
+                    <div class="bg-darkblue/50 p-6 md:p-8 rounded-xl shadow-md backdrop-blur-sm border border-gray-800">
+                        <h3 class="text-xl md:text-2xl font-bold mb-4 md:mb-6">Envie sua mensagem</h3>
+                        <form>
+                            <div class="mb-4 md:mb-6">
+                                <label for="name" class="block text-gray-300 font-medium mb-2">Nome Completo</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 input-field rounded-lg focus:outline-none" placeholder="Seu nome">
+                            </div>
+                            
+                            <div class="mb-4 md:mb-6">
+                                <label for="email" class="block text-gray-300 font-medium mb-2">E-mail</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 input-field rounded-lg focus:outline-none" placeholder="seu@email.com">
+                            </div>
+                            
+                            <div class="mb-4 md:mb-6">
+                                <label for="company" class="block text-gray-300 font-medium mb-2">Empresa</label>
+                                <input type="text" id="company" class="w-full px-4 py-3 input-field rounded-lg focus:outline-none" placeholder="Nome da empresa">
+                            </div>
+                            
+                            <div class="mb-4 md:mb-6">
+                                <label for="message" class="block text-gray-300 font-medium mb-2">Mensagem</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-3 input-field rounded-lg focus:outline-none" placeholder="Como podemos ajudar?"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full button-gradient text-white py-3 px-6 rounded-lg font-medium transition-all duration-300 hover:shadow-techblue/30 hover:scale-[1.02]">
+                                Enviar Mensagem
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-darkblue/80 text-white py-8 md:py-12 border-t border-gray-800 backdrop-blur-sm">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center mb-3 md:mb-4">
+                        <i class="fas fa-shield-alt text-2xl md:text-3xl text-techblue mr-2 md:mr-3"></i>
+                        <span class="text-xl md:text-2xl font-bold">o<span class="logo-gradient">WAF</span></span>
+                    </div>
+                    <p class="text-gray-500 text-sm md:text-base">Proteção avançada para suas aplicações web.</p>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-6 md:gap-8">
+                    <div>
+                        <h4 class="text-base md:text-lg font-bold mb-3 md:mb-4 text-gray-300">Produto</h4>
+                        <ul class="space-y-1 md:space-y-2">
+                            <li><a href="#features" class="text-gray-500 hover:text-white transition text-sm md:text-base">Recursos</a></li>
+                            <li><a href="#how-it-works" class="text-gray-500 hover:text-white transition text-sm md:text-base">Como Funciona</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-base md:text-lg font-bold mb-3 md:mb-4 text-gray-300">Empresa</h4>
+                        <ul class="space-y-1 md:space-y-2">
+                            <li><a href="#contact" class="text-gray-500 hover:text-white transition text-sm md:text-base">Contato</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 md:mt-12 pt-6 md:pt-8 text-center">
+                <p class="text-gray-500 text-sm md:text-base">© 2025 meuWAF. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
